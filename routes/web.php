@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('index');
 });
 Route::resource('/DashboardProject', ProjectController::class);
+Route::resource('/DashboardRevision', RevisionController::class);
+Route::resource('/DashboardReport', ReportController::class);
