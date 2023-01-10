@@ -18,10 +18,10 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('category_id')->constrained('categories_projects');
             $table->string('name_project');
-            $table->text('desc_project');
-            $table->string('status');
-            $table->string('progress');
-            $table->string('web_dev');
+            $table->text('desc_revision')->nullable();
+            $table->string('status')->nullable();
+            $table->string('progress')->nullable();
+            $table->string('web_dev')->nullable();
             $table->timestamps();
         });
     }
