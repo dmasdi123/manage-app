@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\CategoriesProject;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RevisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
-Route::resource('/DashboardProject', ProjectController::class);
-Route::resource('/DashboardRevision', RevisionController::class);
-Route::resource('/DashboardReport', ReportController::class);
+Route::resource('/categoriesProject', CategoriesProject::class);
+Route::resource('/dashboardProject', ProjectController::class);
+Route::resource('/dashboardRevision', RevisionController::class);
+Route::resource('/dashboardReport', ReportController::class);
